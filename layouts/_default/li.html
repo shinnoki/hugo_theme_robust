@@ -14,7 +14,7 @@
         {{ end }}
       </ul>
 
-      <div class="summary">{{ .Summary }}</div>
+      <div class="summary">{{ .Summary | plainify | replaceRE "\n" "<br />" | safeHTML }}</div>
     </div>
   </a>
 </article>
